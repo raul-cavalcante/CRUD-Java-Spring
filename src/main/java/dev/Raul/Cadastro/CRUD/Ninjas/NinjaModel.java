@@ -1,6 +1,9 @@
-package dev.Raul.Cadastro.CRUD;
+package dev.Raul.Cadastro.CRUD.Ninjas;
 
+import dev.Raul.Cadastro.CRUD.Missoes.Missoes;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -14,6 +17,12 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+
+    //1 ninja tem uma missão
+
+    @ManyToOne
+    @JoinColumn(name = "missoes_id")
+    private Missoes missoes;
 
 
     public NinjaModel() {
