@@ -1,12 +1,10 @@
 package dev.Raul.Cadastro.CRUD.Ninjas;
 
-import dev.Raul.Cadastro.CRUD.Missoes.Missoes;
+import dev.Raul.Cadastro.CRUD.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 @Entity
 @Data
@@ -29,7 +27,7 @@ public class NinjaModel {
 
     @ManyToOne
     @JoinColumn(name = "missoes_id")
-    private Missoes missoes;
+    private MissoesModel missoes;
 
 
 }

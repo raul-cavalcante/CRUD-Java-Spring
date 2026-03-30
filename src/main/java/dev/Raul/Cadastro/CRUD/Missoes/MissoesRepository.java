@@ -1,0 +1,8 @@
+package dev.Raul.Cadastro.CRUD.Missoes;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MissoesRepository extends JpaRepository<MissoesModel, Long> {
+
+    
+}
