@@ -18,6 +18,7 @@ public class NinjaController {
 
     @GetMapping("/boasvindas")
     public String boasVindas() {
+
         return "Esta é minha primeira menssagem nessa rota";
     }
 
@@ -25,9 +26,9 @@ public class NinjaController {
     //Adicionar Ninja (Create)
 
     @PostMapping("/criar")
-    public String criarNinja() {
+    public NinjaModel criarNinja(@RequestBody NinjaModel ninja) {
 
-        return "Ninja criado";
+        return ninjaService.criarNinja(ninja);
     }
 
     //Mostrar todos os ninjas (Read)
@@ -47,12 +48,14 @@ public class NinjaController {
     //Alterar dados dos ninjas (Update)
     @PutMapping("/alterarID")
     public String alterarNinjaID() {
+
         return "Atualizar ninja";
     }
 
     //Deletar ninjas (Delete)
     @DeleteMapping("/deletarID")
     public String deletarNInjaID() {
+
         return "Deletar ninja";
     }
 
